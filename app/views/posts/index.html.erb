@@ -1,2 +1,114 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+		<header>
+			<h1><img src="images/3dicon_white.png" alt="" id="title_icon" />Web 3D Viewer</h1>
+		</header>
+
+		<div id="explanation">
+			<!-- 非対応ブラウザ -->
+			<div id="non-capable" class="hidden windowBox">
+				<h3>お使いのブラウザではご利用頂けません</h3>
+				<p>
+					下記のPC版最新ブラウザをお試し下さい
+				</p>
+				<ul>
+					<li>
+						<a href="http://www.google.co.jp/intl/ja/chrome/"> <img src="images/chrome.png" alt="Chrome" /> Google Chrome </a>
+					</li>
+
+					<li>
+						<a href="http://www.mozilla.jp/firefox/"> <img src="images/firefox.png" alt="Firefox" /> Firefox </a>
+					</li>
+
+					<li>
+						<a href="http://www.apple.com/jp/safari/"><img src="images/safari.png" alt="Safari" />Safari</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- intro -->
+			<div id="introduction" class="windowBox">
+				<div id="dropArea">
+					<h3><img src="images/3dicon_black.png" alt="" />Web 3D Viewer</h3>
+					<p class="outline">
+						3Dプリンタなどで利用する.stl形式の3Dデータをブラウザで表示できます
+					</p>
+
+					<p>
+						表示したいファイルをこの枠内にドラッグアンドドロップ
+					</p>
+					<p>
+						もしくは下のボタンを押してファイルを選択して下さい
+					</p>
+
+					<p>
+						※ファイルによっては読み込みに時間がかかることがあります
+					</p>
+
+					<div id="uploadButton">
+						UP LOAD
+					</div>
+
+					<input type="file" name="stlUpload" value="" id="inputFile" />
+				</div>
+			</div>
+		</div>
+
+		<!-- Canvas Box -->
+		<div id="canvasBox">
+
+		</div>
+
+		<div id="loadingWindow" class='hidden'>
+
+			<div id="loaderContainer">
+				<div id="loader"></div>
+				<p>
+					Now Loading...
+				</p>
+			</div>
+		</div>
+
+		<div id="extendsPanel">
+			<div id="panelContainer">
+				<h3><img src="images/3dicon_black.png" alt="" />WEB 3D Viewer</h3>
+
+				<div id="colorPlette">
+					<div id="red" class="colorbox"></div>
+					<div id="clear" class="colorbox"></div>
+					<div id="black" class="colorbox"></div>
+					<div id="brown" class="colorbox"></div>
+					<div id="skyblue" class="colorbox"></div>
+					<div id="orange" class="colorbox"></div>
+					<div id="seablue" class="colorbox"></div>
+					<div id="violet" class="colorbox"></div>
+					<div id="yellow" class="colorbox"></div>
+					<div id="green" class="colorbox"></div>
+					<div id="white" class="colorbox choice"></div>
+					<hr class='clear' />
+				</div>
+
+				<div id="" class="hover-icon-area">
+					<div id="camera" class="icon_box" title="画面をキャプチャします　">
+						<img src="images/camera.png" alt="" class="firstImg" />
+						<img src="images/camera_hover.png" alt="" class="secondImg" />
+					</div>
+
+					<div id="dustbox" class='icon_box' title="現在のデータを破棄してTOPに戻ります">
+						<img src="images/dustbox.png" alt="" class="firstImg" />
+						<img src="images/dustbox_hover.png" alt="" class="secondImg" />
+					</div>
+					<hr class="clear noborder" />
+				</div>
+
+				<div id="controlIcons">
+					<img src="images/mouseicon01.png" alt="" title="ドラッグで移動"/>| <img src="images/mouseicon02.png" alt="" title="スクロールでズーム" />| <img src="images/Dkey.png" alt="" title="[D] + ドラッグで移動"/> + <img src="images/mouseicon01.png" alt="" title="[D] + ドラッグで移動" />
+				</div>
+
+			</div>
+		</div>
+
+		<div id="photoBackground">
+			<div id="photoPanel">
+				<img src="" alt="" id="photo" /><br/>
+				<a href="" id='downloadImage' download='capture.png'><img src="images/210.png" alt="" id="download_icon"/>画像を保存</a>
+			</div>
+		</div>
