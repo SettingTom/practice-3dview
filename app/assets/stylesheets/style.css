@@ -1,0 +1,414 @@
+html, body {
+	min-height: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+hr.clear {clear:both;}
+hr.noborder {border:none;}
+
+header {
+	padding: 5px;
+	background: #000000;
+	color: #eeeeee;
+}
+
+header #title_icon {
+	width: 2em;
+	height: auto;
+	margin: auto 1em;
+	vertical-align: -0.5em;
+}
+
+.hidden {
+	display: none;
+}
+
+#explanation {
+	width: 700px;
+	height: 100%;
+	margin: auto;
+	position: relative;
+}
+
+.windowBox {
+	width: 100%;
+	height: 400px;
+	background: #fcfcfc;
+	border-radius: 5px;
+	box-shadow: #666 1px 1px 3px;
+	position: absolute;
+	top: 25%;
+}
+
+.windowBox h3 {
+	font-size: large;
+	padding: 2em;
+	text-align: center;
+}
+
+.windowBox p {
+	text-align: center;
+	padding-bottom: 1.5em;
+}
+
+.windowBox ul {
+	list-style: none;
+	margin-left: -25%;
+	padding-left: 50%;
+	width: 350px;
+}
+.windowBox ul li {
+	margin: 1em;
+	border-radius: 3px;
+	box-shadow: #999 1px 1px 2px;
+	transition: all ease 0.3s;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s
+}
+.windowBox ul li img {
+	width: 1.4em;
+	height: auto;
+	margin-right: 30px;
+	vertical-align: bottom;
+}
+
+.windowBox ul li a {
+	font-size: 14pt;
+	text-decoration: none;
+	color: #666;
+	width: 100%;
+	display: block;
+	padding: 0.8em;
+	transition: all ease 0.3s;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s
+}
+
+.windowBox ul li a:hover {
+	color: #333;
+}
+
+.windowBox ul li:hover {
+	box-shadow: #666 1px 1px 4px;
+}
+
+/*
+ *  Introduction
+ */
+
+#introduction h3 {
+	font-size: 18pt;
+}
+#introduction h3 img {
+	width: 2em;
+	vertical-align: -0.5em;
+	margin: auto 1em;
+}
+
+/*
+ * 
+ *  DropArea
+ */
+#introduction #dropArea {
+	width: 660px;
+	height: 360px;
+	margin: 1em auto;
+	border-radius: 5px;
+	border: #CCCCCC 3px dotted;
+}
+
+#introduction #dropArea p {
+	font-size: small;
+	color: #666;
+}
+#introduction #dropArea p.outline {
+	font-size: medium;
+	color: #333;
+}
+
+.dragOver {border : #4fa637 3px dotted !important ;}
+
+#uploadButton {
+	width: 300px;
+	border-radius: 5px;
+	background: rgba(0.9, 0.98, 0.98, 0.8);
+	box-shadow: #666 1px 1px 2px;
+	margin: 2em auto auto;
+	text-align: center;
+	padding: 0.5em;
+	font-size: large;
+	font-weight: lighter;
+	cursor: pointer;
+	color: #22130b;
+	text-shadow: 1px 1px 0px #565656, -1px -1px #efeaef;
+	transition: all ease 0.3s;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	-o-transition: all ease 0.3s;
+}
+
+#uploadButton:hover {
+	
+	box-shadow:#666 1px 1px 4px;
+	
+}
+
+#inputFile {
+	display: none;
+}
+
+
+
+/*
+ * Loading @CSS Animation
+ */
+#loadingWindow{
+	width : 100%;
+	height:100%;
+	position : absolute;
+	top:0;
+	left:0;
+	z-index: 1;
+}
+
+#loadingWindow #loaderContainer
+{
+	width:120px;
+	height:60px;
+	
+	margin:auto;
+	padding-top:50%;
+	margin-top:-25%;
+}
+
+
+#loadingWindow #loaderContainer p
+{
+	font-size:medium;
+	color: #4FA637;
+	opacity:1.0;
+}
+
+#loadingWindow #loaderContainer #loader
+{
+	width:30px;
+	height:30px;
+	margin:auto;
+	margin-bottom:30px;
+	
+	border-radius:30px;
+	border : solid 8px #4FA637;
+	border-right-color:transparent;
+	
+	animation: spin 1s infinite linear;
+	-webkit-animation: spin 1s infinite linear;
+	-moz-animation:spin 1s infinite linear;
+	-o-animation:spin 1s infinite linear;
+}
+
+/*		key Frame Animation */
+@-webkit-keyframes spin
+{
+	0% { -webkit-transform: rotate(0deg); opacity: 0.4; }
+	50%  { -webkit-transform: rotate(180deg); opacity: 1; }
+	100%   { -webkit-transform: rotate(360deg); opacity: 0.4; }
+}
+
+@-moz-keyframes spin
+{
+	0% { -moz-transform: rotate(0deg); opacity: 0.4; }
+	50%  { -moz-transform: rotate(180deg); opacity: 1; }
+	100%   { -moz-transform: rotate(360deg); opacity: 0.4; }
+}
+
+
+
+/*
+ * Side Menu
+ * =========================
+ */
+#extendsPanel
+{
+	height:100%;
+	width:250px;
+	
+	padding:1em;
+	
+	position:absolute;
+	top:0;
+	left:-300px;
+}
+
+#extendsPanel #panelContainer
+{
+	width:100%;
+	display: table-cell;
+	
+	position:absolute;
+	top:25%;
+	
+}
+
+#extendsPanel h3 img
+{
+	width:3em;
+	margin:1em;
+	vertical-align: middle;
+}
+
+#extendsPanel #gotoHome{
+	margin:auto;
+	text-align:center;
+}
+
+#extendsPanel #panelContainer #colorPlette
+{
+	width:230px;
+	margin:2em auto;
+	margin-left:1em;
+}
+
+.colorbox {
+	width:30px;
+	height:30px;
+	
+	border-radius : 3px;
+	
+	float:left;
+	margin-right:1em;
+	margin-bottom:1em;
+	
+	cursor:pointer;
+}
+
+#red {background-color:#CE6A57;}
+#clear{background-color:#C5C5C5;}
+#black{background-color:#313432;}
+#brown{background-color:#CCA37D;}
+#skyblue{background-color:#60A2D7;}
+#orange{background-color:#F5A74E;}
+#seablue{background-color:#76C7CB;}
+#violet{background-color:#D979AD;}
+#yellow{background-color:#E1E774;}
+#green{background-color:#86C686;}
+#white{background-color:#F5F3E6;}
+
+
+/*
+ *  Hover Icon @Camera & DustBox
+ * ==================================
+ */
+.hover-icon-area
+{
+	margin:2em auto;
+	position:relative;
+	height:50px;
+	width:230px;
+	margin-left:1em;
+}
+
+.hover-icon-area .icon_box
+{
+	width:40px;
+	height:40px;
+	position:relative;
+}
+
+#camera {float:left; margin-right:2em; }
+#dustbox {float:left;}
+
+.hover-icon-area img {
+	position:absolute;
+	width:auto;
+	height:auto;
+	
+	cursor: pointer;
+
+}
+
+.icon_box .firstImg {
+	opacity:1.0;
+	
+	transition:all ease 0.3s;
+	-webkit-transtiion:all ease 0.3s;
+	-moz-transition:all ease 0.3s;
+}
+
+.icon_box .secondImg {
+	opacity:0.0;
+	
+	transition:opacity ease 0.3s;
+	-webkit-transition: opacity ease 0.3s;
+	-moz-transition:opacity ease 0.3s;
+}
+
+
+.icon_box:hover > .firstImg { opacity:0.0;}
+.icon_box:hover > .secondImg {opacity:1.0;}
+
+
+
+#controlIcons{
+	text-align:center;
+	color:#4FA637;
+	margin-left:1em;
+	width:230px;
+}
+#controlIcons img {
+	width:40px;
+	vertical-align: middle;
+	margin:auto 3px;
+
+}
+
+
+/*
+ *  Photo Panel
+ * ===============================
+ */ 
+#photoBackground
+{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color : rgba(0, 0 , 0, 0.3);
+	
+	display:none;
+}
+
+#photoPanel
+{
+	width:50%;
+	margin:auto;
+	margin-top:12%;
+}
+
+#photoPanel #photo {
+	width:100%;
+	height:auto;
+	border:solid 5px #EFEAEF;	
+	box-shadow:3px 3px 6px #666;
+	background-color:#fff;	
+}
+
+
+#download_icon
+{
+	width:2em;
+	margin:auto 0.5em;
+	vertical-align: middle;
+}
+
+#photoPanel a {
+	margin-top:0.5em;
+	color:#fff;
+	text-decoration: none;
+	
+	float:right;
+}
+
