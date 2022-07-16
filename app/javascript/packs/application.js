@@ -7,6 +7,12 @@ require("@rails/ujs").start()
 // require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("../js/3dViewer.min")
+require("../js/jdataview")
+require("../js/jquery-1.7.2.min")
+require("../js/jquery.color.utils-0.1.0")
+require("../js/three.min.r58")
+require("../js/TrackballControls.r58")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
